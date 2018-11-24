@@ -1,4 +1,4 @@
-package es.upm.dit.apsv.webLab.test;
+package tests.es.upm.dit.apsv.webLab.test;
 
 import es.upm.dit.apsv.webLab.dao.PublicationDAO;
 import es.upm.dit.apsv.webLab.dao.ResearcherDAO;
@@ -27,12 +27,12 @@ public class Main {
 		ids.add(researcher.getId());
 		
 		rdao.create(researcher);
-		rdao.read(researcher.getId());
-		rdao.update(researcher);
-		rdao.delete(researcher);
-		rdao.readAll();
-		rdao.readAsUser(researcher.getEmail(), researcher.getPassword());
-		rdao.parseResearchers(ids);
+//		rdao.read(researcher.getId());
+//		rdao.update(researcher);
+//		rdao.delete(researcher);
+//		rdao.readAll();
+//		rdao.readAsUser(researcher.getEmail(), researcher.getPassword());
+//		rdao.parseResearchers(ids);
 		
 		System.out.println("ResearcherDAO OK!");
 	}
