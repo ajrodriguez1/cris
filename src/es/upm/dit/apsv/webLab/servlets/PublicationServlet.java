@@ -21,9 +21,9 @@ public class PublicationServlet extends HttpServlet {
 		String publicationId = req.getParameter("id");
 		Publication publication = PublicationDAOImplementation.getInstance().read(publicationId);
 		req.getSession().setAttribute("publication", publication);
-		ResearcherDAO rdao = ResearcherDAOImplementation.getInstance();
-		req.getSession().setAttribute("firstAuthor", rdao.read(publication.getFirstAuthor()));
-		req.getSession().setAttribute("authors", rdao.parseResearchers(publication.getAuthors()));
-		getServletContext().getRequestDispatcher("/PublicationView.jsp").forward(req, resp);
+//		ResearcherDAO rdao = ResearcherDAOImplementation.getInstance();
+//		req.getSession().setAttribute("firstAuthor", rdao.read(publication.getFirstAuthor()));
+//		req.getSession().setAttribute("authors", rdao.parseResearchers(publication.getAuthors()));
+//		getServletContext().getRequestDispatcher("/PublicationView.jsp").forward(req, resp);
 	}
 }
