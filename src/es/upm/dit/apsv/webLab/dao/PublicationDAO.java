@@ -14,27 +14,62 @@ public class PublicationDAO {
 		this.pdaoi = PublicationDAOImplementation.getInstance();
 	}
 	
-	public Publication create (Publication publication) {
-		return null;
+	/**
+	 * Insert a new publication
+	 * 
+	 * @param publication Data of the publication to insert
+	 * @return True if the publication was inserted correctly
+	 */
+	public boolean create (Publication publication) {
+		return this.pdaoi.create(publication);
 	}
 	
+	/**
+	 * Look for a publication by his Id
+	 * 
+	 * @param publicationId 
+	 * @return Publication information
+	 */
 	public Publication read (String publicationId) {
-		return null;
+		return this.pdaoi.read(publicationId);
 	}
 	
-	public Publication update ( Publication publication ) {
-		return null;
+	/**
+	 * Update the information of a publication
+	 * 
+	 * @param publication Publication information to update
+	 * @return True if the procedure was right
+	 */
+	public boolean update (Publication publication) {
+		return this.pdaoi.update(publication);
 	}
 	
-	public Publication delete ( Publication publication ) {
-		return null;
+	/**
+	 * Delete a publication
+	 * 
+	 * @param publication to be deleted
+	 * @return True if the procedure was right
+	 */
+	public boolean delete (Publication publication) {
+		return this.pdaoi.delete(publication);
 	}
 
+	/**
+	 * Get all the database information
+	 * 
+	 * @return All publications
+	 */
 	public List<Publication> readAll (){
-		return null;
+		return this.pdaoi.readAll();
 	}
 	
+	/**
+	 * Look for all the publications whose ids have been provided
+	 * 
+	 * @param ids List of publications ids
+	 * @return List with all the publications ids requested
+	 */
 	public List<Publication> parsePublications (Collection<String> ids){
-		return null;
+		return this.pdaoi.parsePublications(ids);
 	}
 }

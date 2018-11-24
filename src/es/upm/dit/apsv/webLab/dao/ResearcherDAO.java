@@ -1,7 +1,6 @@
 package es.upm.dit.apsv.webLab.dao;
 
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Collection;
 
 import es.upm.dit.apsv.webLab.model.Researcher;
@@ -14,35 +13,73 @@ public class ResearcherDAO{
 		this.rdaoi = ResearcherDAOImplementation.getInstance();
 	}
 	
-	public Researcher create (Researcher researcher) {
-		return rdaoi.create(researcher);
+	/**
+	 * Insert a new researcher
+	 * 
+	 * @param researcher Data of the researcher to insert
+	 * @return True if the researcher was inserted correctly
+	 */
+	public boolean create (Researcher researcher) {
+		return this.rdaoi.create(researcher);
 	}
 	
+	/**
+	 * Look for a researcher by his Id
+	 * 
+	 * @param researcherId 
+	 * @return Researcher information
+	 */
 	public Researcher read (String researcherId) {
-		return null;
+		return this.rdaoi.read(researcherId);
 	}
 	
-	public Researcher update (Researcher researcherId) {
-		return null;
+	/**
+	 * Update the information of a researcher
+	 * 
+	 * @param researcher Researcher information to update
+	 * @return True if the procedure was right
+	 */
+	public boolean update (Researcher researcher) {
+		return this.rdaoi.update(researcher);
 	}
 	
-	public Researcher delete (Researcher researcherId) {
-		return null;
+	/**
+	 * Delete a researcher
+	 * 
+	 * @param researcher to be deleted
+	 * @return True if the procedure was right
+	 */
+	public boolean delete (Researcher researcher) {
+		return this.rdaoi.delete(researcher);
 	}
 	
+	/**
+	 * Get all the database information
+	 * 
+	 * @return All researchers
+	 */
 	public List<Researcher> readAll (){
-		return null;
+		return this.rdaoi.readAll();
 	}
 	
+	/**
+	 * Get researcher information looking for email and password
+	 * 
+	 * @param email Researcher email
+	 * @param password Researcher password
+	 * @return Researcher if this was found, else null
+	 */
 	public Researcher readAsUser (String email, String password) {
-		return null;
+		return this.rdaoi.readAsUser(email, password);
 	}
 	
+	/**
+	 * Look for all the researchers whose ids have been provided
+	 * 
+	 * @param ids List of researchers ids
+	 * @return List with all the researchers ids requested
+	 */
 	public List<Researcher> parseResearchers (Collection<String> ids) {
-		return null;
-	}
-	
-	public Researcher parseResearchers (String researcherId) {
-		return null;
+		return this.rdaoi.parseResearchers(ids);
 	}
 }
