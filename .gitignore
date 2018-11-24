@@ -1,5 +1,8 @@
 # Compiled class file
 *.class
+.classpath
+.project
+.settings/
 
 # Log file
 *.log
@@ -23,3 +26,5 @@
 hs_err_pid*
 /build/
 /target/
+/WebContent/META-INF/
+
