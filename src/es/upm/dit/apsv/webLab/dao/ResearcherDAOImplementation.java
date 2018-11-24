@@ -11,7 +11,7 @@ import java.util.List;
 import es.upm.dit.apsv.webLab.model.Researcher;
 
 //Class with Singleton structure
-class ResearcherDAOImplementation {
+public class ResearcherDAOImplementation {
 	private static ResearcherDAOImplementation instance = null;
 	private ResearcherDAOImplementation() {}
 	public static ResearcherDAOImplementation getInstance() {

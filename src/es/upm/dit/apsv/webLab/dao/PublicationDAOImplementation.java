@@ -11,7 +11,7 @@ import java.util.List;
 import es.upm.dit.apsv.webLab.model.Publication;
 
 //Class with Singleton structure
-class PublicationDAOImplementation {
+public class PublicationDAOImplementation {
 	private static PublicationDAOImplementation instance = null;
 	private PublicationDAOImplementation() {}
 	public static PublicationDAOImplementation getInstance() {

@@ -1,7 +1,6 @@
 package es.upm.dit.apsv.webLab.dao;
 
 import java.util.List;
-import java.util.ArrayList;
 import java.util.Collection;
 
 import es.upm.dit.apsv.webLab.model.Publication;
