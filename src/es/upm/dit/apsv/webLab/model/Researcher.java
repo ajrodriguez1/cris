@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity (name = "Researcher")
 public class Researcher {
 	// Attributes
 	@Id
