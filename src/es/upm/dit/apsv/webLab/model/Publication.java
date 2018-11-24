@@ -1,15 +1,27 @@
 package es.upm.dit.apsv.webLab.model;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Publication {
 	// Attributes
-	private String id, title, publicationName, publicationDate, eid, firstAuthor;
+	@Id
+	private String id;
+	
+	private String title, publicationName, publicationDate, eid, firstAuthor;
 	private int citeCount;
+	
+	@ElementCollection(fetch=FetchType.EAGER)
 	private List<String> authors;
 	
 	public Publication () {
+		super();
 		// Initialize only collection variables
 		this.authors = new ArrayList<String>();
 	}
