@@ -14,7 +14,7 @@ public class Main {
 		Publication publication = createPublication();
 		Researcher researcher = createResearcher();
 
-//		daoResearcher(researcher);
+		daoResearcher(researcher);
 		daoPublication(publication);
 	}
 	
@@ -31,11 +31,11 @@ public class Main {
 		ids.add(publication.getId());
 
 		pdao.create(publication);
-//		p = pdao.read(publication.getId());
-//		pdao.update(publication);
-//		pdao.delete(publication);
-//		ps = pdao.readAll();
-//		ps = pdao.parsePublications(ids);
+		p = pdao.read(publication.getId());
+		pdao.update(publication);
+		pdao.delete(publication);
+		ps = pdao.readAll();
+		ps = pdao.parsePublications(ids);
 
 		System.out.println("PublicationDAO OK!");
 	}
