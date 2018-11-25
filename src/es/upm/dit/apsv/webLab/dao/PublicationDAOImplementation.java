@@ -82,7 +82,7 @@ public class PublicationDAOImplementation {
 	        session.beginTransaction();
 	        
 	        // Launch query
-	        publication = (Publication) session.get("Publication", publicationId);
+	        publication = (Publication) session.get(Publication.class, publicationId);
 	        
 		} catch (Exception e) {
             // Handle exceptions		
@@ -207,7 +207,7 @@ public class PublicationDAOImplementation {
 	        session.beginTransaction();
 	        
 	        // Select all
-	        publications = (List<Publication>) session.createQuery("SELECT * FROM Publication").list();
+	        publications = (List<Publication>) session.createQuery("FROM Publication").list();
 	        
 		} catch (Exception e) {
             // Handle exceptions			

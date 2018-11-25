@@ -82,7 +82,7 @@ public class ResearcherDAOImplementation {
 	        session.beginTransaction();
 	        
 	        // Launch query
-	        researcher = (Researcher) session.get("Researcher", researcherId);
+	        researcher = (Researcher) session.get(Researcher.class, researcherId);
 	        
 		} catch (Exception e) {
             // Handle exceptions		
@@ -207,7 +207,7 @@ public class ResearcherDAOImplementation {
 	        session.beginTransaction();
 	        
 	        // Select all
-	        researchers = (List<Researcher>) session.createQuery("SELECT * FROM Researcher").list();
+	        researchers = (List<Researcher>) session.createQuery("FROM Researcher").list();
 	        
 		} catch (Exception e) {
             // Handle exceptions			
@@ -246,10 +246,10 @@ public class ResearcherDAOImplementation {
 	        
 	        // Select filter by email and password
 	        researcher = (Researcher) session.createQuery(
-	        		"SELECT * "
+	        		"SELECT r "
 	        		+ "FROM Researcher r "
-	        		+ "WHERE r.email=:email"
-	        		+ "AND r.passord=:password")
+	        		+ "WHERE r.email=:email "
+	        		+ "AND r.password=:password")
 	        		.setParameter("email", email)
 	        		.setParameter("password", password)
 	        		.uniqueResult();
