@@ -36,7 +36,7 @@ public class Researcher {
 		return this.name;
 	}
 	
-	public String getLasName () {
+	public String getLastName () {
 		return this.lastName;
 	}
 	

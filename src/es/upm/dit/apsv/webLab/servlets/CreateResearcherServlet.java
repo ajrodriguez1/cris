@@ -21,6 +21,7 @@ public class CreateResearcherServlet extends HttpServlet {
 			String name = req.getParameter("name");
 			String lastName = req.getParameter("last_name");
 			Researcher r = new Researcher();
+			
 			r.setId(id);
 			r.setName(name);
 			r.setLastName(lastName);

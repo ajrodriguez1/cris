@@ -17,7 +17,7 @@ public class AdminServlet extends HttpServlet {
 			getServletContext().getRequestDispatcher("/AdminView.jsp").forward(req, resp);
 		else {
 			req.setAttribute("message", "You are not allowed to view this page");
-			getServletContext().getRequestDispatcher("/FormLogin.jsp").forward(req, resp);
+			getServletContext().getRequestDispatcher("/LoginView.jsp").forward(req, resp);
 		}
 	}
 

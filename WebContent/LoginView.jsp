@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%@ include file="Header.jsp"%>
-	<h2>Acceder a cuenta existente</h2>
+	<h2>Access</h2>
 	<form action="LoginServlet" method="post">
 		<input type="text" name="email" placeholder="Email"> <input
 			type="password" name="password" placeholder="Password">

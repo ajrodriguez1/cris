@@ -8,9 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import es.upm.dit.apsv.webLab.dao.PublicationDAOImplementation;
+import es.upm.dit.apsv.webLab.dao.PublicationDAO;
 import es.upm.dit.apsv.webLab.dao.ResearcherDAO;
-import es.upm.dit.apsv.webLab.dao.ResearcherDAOImplementation;
 import es.upm.dit.apsv.webLab.model.Publication;
 
 @WebServlet("/PublicationServlet")
@@ -18,12 +17,14 @@ public class PublicationServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PublicationDAO pdao = new PublicationDAO();
+		ResearcherDAO rdao = new ResearcherDAO();
 		String publicationId = req.getParameter("id");
-		Publication publication = PublicationDAOImplementation.getInstance().read(publicationId);
+		Publication publication = pdao.read(publicationId);
+		
 		req.getSession().setAttribute("publication", publication);
-//		ResearcherDAO rdao = ResearcherDAOImplementation.getInstance();
-//		req.getSession().setAttribute("firstAuthor", rdao.read(publication.getFirstAuthor()));
-//		req.getSession().setAttribute("authors", rdao.parseResearchers(publication.getAuthors()));
-//		getServletContext().getRequestDispatcher("/PublicationView.jsp").forward(req, resp);
+		req.getSession().setAttribute("authors", rdao.parseResearchers(publication.getAuthors()));
+
+		getServletContext().getRequestDispatcher("/PublicationView.jsp").forward(req, resp);
 	}
 }
