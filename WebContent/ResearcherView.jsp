@@ -53,6 +53,7 @@
 				</p>
 				<button type="submit">Update</button>
 			</form>
+			
 		<h3>Add new publication</h3>
 			<form action="CreatePublicationServlet" method="post">
 				<input type="hidden" name="first_author" value="${researcher.id}" />

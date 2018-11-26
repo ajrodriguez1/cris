@@ -27,14 +27,12 @@
 		<button type="submit">Create researcher</button>
 	</form>
 	<h2>Populate researchers</h2>
-	<form action="PupulateResearchersServlet" method="post"
-		enctype="multipart/form-data">
+	<form action="PupulateResearchersServlet" method="post" enctype="multipart/form-data">
 		<input type="file" name="file" />
 		<button type="submit">Populate</button>
 	</form>
 	<h2>Populate publications</h2>
-	<form action="PopulatePublicationsServlet" method="post"
-		enctype="multipart/form-data">
+	<form action="PopulatePublicationsServlet" method="post" enctype="multipart/form-data">
 		<input type="file" name="file" />
 		<button type="submit">Populate</button>
 	</form>
