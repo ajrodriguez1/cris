@@ -31,11 +31,11 @@ public class Main {
 		ids.add(publication.getId());
 
 		pdao.create(publication);
-		p = pdao.read(publication.getId());
-		pdao.update(publication);
-		pdao.delete(publication);
-		ps = pdao.readAll();
-		ps = pdao.parsePublications(ids);
+//		p = pdao.read(publication.getId());
+//		pdao.update(publication);
+//		pdao.delete(publication);
+//		ps = pdao.readAll();
+//		ps = pdao.parsePublications(ids);
 
 		System.out.println("PublicationDAO OK!");
 	}
@@ -53,12 +53,12 @@ public class Main {
 		ids.add(researcher.getId());
 
 		rdao.create(researcher);
-		r = rdao.read(researcher.getId());
-		rdao.update(researcher);
-		rdao.delete(researcher);
-		rs = rdao.readAll();
-		r = rdao.readAsUser(researcher.getEmail(), researcher.getPassword());
-		rs = rdao.parseResearchers(ids);
+//		r = rdao.read(researcher.getId());
+//		rdao.update(researcher);
+//		rdao.delete(researcher);
+//		rs = rdao.readAll();
+//		r = rdao.readAsUser(researcher.getEmail(), researcher.getPassword());
+//		rs = rdao.parseResearchers(ids);
 
 		System.out.println("ResearcherDAO OK!");
 	}
@@ -67,14 +67,14 @@ public class Main {
 		Publication publication = new Publication();
 		List<String> authors = new ArrayList<String>();
 
-		authors.add("1");
-		authors.add("2");
-		authors.add("4");
-		authors.add("5");
-		authors.add("6");
+		authors.add("id4");
+		authors.add("id4");
+		authors.add("id4");
+		authors.add("id4");
+		authors.add("id4");
 
 		// Publication class test kit
-		publication.setId("id45");
+		publication.setId("id47");
 		publication.setTitle("Title");
 		publication.setFirstAuthor("Antonio");
 		publication.setPublicationDate("15/05/2018");
@@ -92,18 +92,18 @@ public class Main {
 		Researcher researcher = new Researcher();
 		List<String> publications = new ArrayList<String>();
 
-		publications.add("1");
-		publications.add("2");
-		publications.add("3");
-		publications.add("4");
-		publications.add("5");
+		publications.add("id47");
+		publications.add("id47");
+		publications.add("id47");
+		publications.add("id47");
+		publications.add("id47");
 
 		// Researcher class test kit
-		researcher.setId("id1");
+		researcher.setId("id4");
 		researcher.setName("Antonio Javier");
 		researcher.setLastName("Rodriguez");
-		researcher.setEmail("anto@hotmail.com");
-		researcher.setPassword("hello4444");
+		researcher.setEmail("c");
+		researcher.setPassword("c");
 		researcher.setEid("45666");
 		researcher.setScopusUrl("http://google.com");
 		researcher.setPublications(publications);
